@@ -1,0 +1,44 @@
+.emails {
+  display: grid;
+  justify-items: center;
+  grid-template-areas:
+    'search'
+    'check'
+    'content';
+
+  margin-top: 5rem;
+  row-gap: 2.5rem;
+
+  @include respond(tab-port) {
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: min-content;
+    grid-template-areas:
+      'search search'
+      'check content'
+      '.   content';
+    column-gap: 4rem;
+  }
+
+  &__content {
+    @extend .u-glass;
+    @extend .u-border-radius-3;
+
+    grid-area: content / content;
+    width: 100%;
+    max-width: 104rem;
+
+    display: grid;
+    row-gap: 1rem;
+    justify-items: center;
+
+    padding: 1rem;
+  }
+
+  &__check {
+    grid-area: check / check;
+  }
+
+  &__search {
+    grid-area: search / search;
+  }
+}

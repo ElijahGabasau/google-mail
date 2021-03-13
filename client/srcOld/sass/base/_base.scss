@@ -1,0 +1,41 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+input {
+  outline: none;
+  font-family: inherit;
+}
+
+button {
+  outline: none;
+}
+
+// ::selection {
+//   background-color: $color-primary;
+//   color: $color-white;
+// }

@@ -1,0 +1,61 @@
+body,
+input,
+textarea,
+button {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  font-weight: 300;
+  line-height: 1.7;
+  font-size: 1.6rem;
+  color: $color-primary;
+}
+
+.a {
+  color: inherit;
+}
+
+.t {
+  &--thin {
+    font-weight: 300;
+  }
+
+  &--semibold {
+    font-weight: 500;
+  }
+}
+
+.p {
+  font-size: 1.4rem;
+}
+
+.button {
+  color: $color-white;
+  font-weight: 800;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+}
+
+.button-toggle {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  text-transform: capitalize;
+}
+
+.email {
+  color: $color-grey-2;
+
+  &__data {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+}
+
+.searchbar {
+  &__input {
+    font-size: 1.6rem;
+  }
+}

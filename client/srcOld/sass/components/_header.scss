@@ -1,0 +1,39 @@
+.header {
+  @extend .u-glass-pale;
+
+  padding: 1rem;
+  display: grid;
+  grid-template-areas: 'nav cred';
+
+  @include respond(tab-port) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 'nav . cred';
+  }
+
+  &__navigation {
+    @extend .u-space-between-aligned;
+
+    grid-area: nav / nav;
+  }
+
+  &__credentials {
+    @extend .u-solid;
+    @extend .u-border-radius-1;
+    @extend .u-space-between-aligned;
+
+    width: 20rem;
+    grid-area: cred / cred;
+    justify-self: end;
+    padding: 0.5rem 2rem;
+
+    @include respond(tab-port) {
+      width: 35rem;
+    }
+  }
+
+  &__image {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100%;
+  }
+}

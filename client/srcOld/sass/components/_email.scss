@@ -1,0 +1,43 @@
+.email {
+  @extend .u-solid;
+  @extend .u-border-radius-3;
+
+  max-width: 100rem;
+  width: 100%;
+  padding: 2rem 4rem;
+
+  display: grid;
+  row-gap: 1rem;
+
+  &--collapsed {
+    row-gap: 0;
+    max-height: 15rem;
+
+    @include respond(tab-port) {
+      max-height: 10rem;
+    }
+  }
+
+  &--collapsed > * {
+    &:not(.email__subject) {
+      @extend .u-collapsed;
+    }
+  }
+
+  &__data {
+    padding: 1rem 0;
+    border-top: 1px solid $color-grey-1;
+    border-bottom: 1px solid $color-grey-1;
+  }
+
+  &__subject {
+    display: flex;
+    justify-content: space-between;
+
+    cursor: pointer;
+  }
+
+  &__figure {
+    width: 3rem;
+  }
+}
